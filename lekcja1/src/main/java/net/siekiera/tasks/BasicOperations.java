@@ -16,6 +16,18 @@ package net.siekiera.tasks;
 public class BasicOperations {
         public static int basicMath(String op, int v1, int v2)
         {
-            return 0;
+            switch (op) {
+                case "+":
+                    return v1+v2;
+                case "-":
+                    return v1-v2;
+                case "*":
+                    return v1 * v2;
+                case "/":
+                    return v1/v2;
+                default:
+                    throw new IllegalArgumentException();
+
+            }
         }
 }

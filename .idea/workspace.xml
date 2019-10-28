@@ -1,10 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7682d066-df31-455b-ad80-ecbc49bba8df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/src/main/java/net/siekiera/tasks/BasicOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/src/main/java/net/siekiera/tasks/BasicOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/src/main/java/net/siekiera/tasks/WordSmasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/src/main/java/net/siekiera/tasks/WordSmasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/target/classes/META-INF/demo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/BasicOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/BasicOperations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/GrassHopper.class" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/GrassHopper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/WordSmasher.class" beforeDir="false" afterPath="$PROJECT_DIR$/lekcja1/target/classes/net/siekiera/tasks/WordSmasher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lekcja1/target/test-classes/META-INF/demo.kotlin_module" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1SmlJW19uAVTTUQ5eQOo13gDLh2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.BasicOperationsTest">
+    <configuration name="BasicOperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.siekiera.tasks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.siekiera.tasks" />
+      <option name="MAIN_CLASS_NAME" value="net.siekiera.tasks.BasicOperationsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordSmasherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.siekiera.tasks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.siekiera.tasks" />
+      <option name="MAIN_CLASS_NAME" value="net.siekiera.tasks.WordSmasherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BasicOperationsTest" />
+        <item itemvalue="JUnit.WordSmasherTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7682d066-df31-455b-ad80-ecbc49bba8df" name="Default Changelist" comment="" />
+      <created>1572176580452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572176580452</updated>
+      <workItem from="1572176583915" duration="636000" />
+      <workItem from="1572177711972" duration="765000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
