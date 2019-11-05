@@ -1,7 +1,5 @@
 package net.siekiera;
 
-import net.siekiera.tasks.BasicOperations;
-
 /**
  * @see <a href="https://www.tutorialspoint.com/java/java_methods.htm">More about methods</a>
  */

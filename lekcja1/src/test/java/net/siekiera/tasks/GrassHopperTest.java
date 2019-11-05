@@ -1,5 +1,6 @@
 package net.siekiera.tasks;
 
+import net.siekiera.tasks.lekcja1.GrassHopper;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

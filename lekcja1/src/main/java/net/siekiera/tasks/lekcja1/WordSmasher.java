@@ -1,4 +1,4 @@
-package net.siekiera.tasks;
+package net.siekiera.tasks.lekcja1;
 
 public class WordSmasher {
     public static void main(String[] args) {

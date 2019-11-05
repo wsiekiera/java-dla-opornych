@@ -1,4 +1,4 @@
-package net.siekiera.tasks;
+package net.siekiera.tasks.lekcja1;
 
 /**
  * https://www.codewars.com/kata/grasshopper-summation/train/java
