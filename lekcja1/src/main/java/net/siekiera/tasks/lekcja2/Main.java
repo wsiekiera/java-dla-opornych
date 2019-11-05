@@ -32,6 +32,7 @@ package net.siekiera.tasks.lekcja2;
  * Results in Winnings = £10 (first bet lost, second bet won, third bet lost);
  *
  * Return your total winning as a string with the £ sign like this: '£100'
+ * 
  */
 
 public class Main {
