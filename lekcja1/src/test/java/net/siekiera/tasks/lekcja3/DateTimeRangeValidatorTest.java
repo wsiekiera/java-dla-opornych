@@ -24,14 +24,14 @@ public class DateTimeRangeValidatorTest {
 
     @Before
     public void prepareTestData() {
-        start1 = LocalDateTime.of(2019, 11, 06, 17, 00, 00);
-        end1 = LocalDateTime.of(2019, 11, 06, 18, 00, 00);
-        start2 = LocalDateTime.of(2019, 11, 06, 19, 00, 00);
-        end2 = LocalDateTime.of(2019, 11, 06, 20, 00, 00);
-        start3 = LocalDateTime.of(2019, 11, 06, 21, 00, 00);
-        end3 = LocalDateTime.of(2019, 11, 06, 22, 00, 00);
-        start4 = LocalDateTime.of(2019, 11, 06, 10, 00, 00);
-        end4 = LocalDateTime.of(2019, 11, 06, 19, 15, 00);
+        start1 = LocalDateTime.of(2019, 11, 6, 17, 0, 0);
+        end1 = LocalDateTime.of(2019, 11, 6, 18, 0, 0);
+        start2 = LocalDateTime.of(2019, 11, 6, 19, 0, 0);
+        end2 = LocalDateTime.of(2019, 11, 6, 20, 0, 0);
+        start3 = LocalDateTime.of(2019, 11, 6, 21, 0, 0);
+        end3 = LocalDateTime.of(2019, 11, 6, 22, 0, 0);
+        start4 = LocalDateTime.of(2019, 11, 6, 10, 0, 0);
+        end4 = LocalDateTime.of(2019, 11, 6, 19, 15, 0);
 
         range1 = new DateTimeRange(start1, end1);
         range2 = new DateTimeRange(start2, end2);
