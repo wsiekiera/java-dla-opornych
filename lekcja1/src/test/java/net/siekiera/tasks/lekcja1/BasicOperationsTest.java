@@ -1,6 +1,5 @@
 package net.siekiera.tasks.lekcja1;
 
-import net.siekiera.tasks.lekcja1.BasicOperations;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
