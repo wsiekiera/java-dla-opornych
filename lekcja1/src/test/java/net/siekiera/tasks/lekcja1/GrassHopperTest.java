@@ -1,4 +1,4 @@
-package net.siekiera.tasks;
+package net.siekiera.tasks.lekcja1;
 
 import net.siekiera.tasks.lekcja1.GrassHopper;
 import org.junit.Test;
