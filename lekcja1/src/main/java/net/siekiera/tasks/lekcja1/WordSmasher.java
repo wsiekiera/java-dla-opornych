@@ -8,10 +8,12 @@ public class WordSmasher {
     public static String smash(String... words) {
         String output = "";
         // TODO Write your code below this comment please
-        for (String word : words) output += word;
-        // czy ze spacjami?
-
-
+        int i = 1;
+        for (String word : words) {
+            output += word;
+            if (i != words.length) output += " ";
+            i++;
+        }
 
         /*int arrayLength = words.length;
         for (int i=0; i<arrayLength; i++) {

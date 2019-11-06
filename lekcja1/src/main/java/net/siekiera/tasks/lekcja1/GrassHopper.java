@@ -14,9 +14,8 @@ package net.siekiera.tasks.lekcja1;
  */
 public class GrassHopper {
         public static int summation(int n) {
-            int suma = 0;
-            for (int i = 1; i <= n; i++) suma += i;
-            return suma;
+            if (n > 0) return n+summation(--n);
+            else return 0;
         }
 
     public static void main(String[] args) {
