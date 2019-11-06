@@ -18,4 +18,8 @@ public class Ticket {
         }
         return sb.toString();
     }
+
+    public Bet getBet(int i) {
+        return bets[i];
+    }
 }

@@ -37,11 +37,11 @@ package net.siekiera.tasks.lekcja2;
 
 public class Main {
     public static void main(String[] args) {
-        Ticket ticket = new Ticket(1, 2, 3);
+        Ticket ticket = new Ticket(10, 20, 5);
         System.out.println(ticket);
 
-		String[] results = {"1-0", "2-1", "3-3"};
+		String[] results = {"1-0", "2-1", "0-1"};
 		TicketChecker ticketChecker = new TicketChecker(results,ticket);
-
+        System.out.println("Results in Winnings = $" + ticketChecker.calculateWin());
     }
 }
