@@ -32,14 +32,11 @@ package net.siekiera.tasks.lekcja2;
  * Results in Winnings = £10 (first bet lost, second bet won, third bet lost);
  *
  * Return your total winning as a string with the £ sign like this: '£100'
+ * 
  */
 
 public class Main {
     public static void main(String[] args) {
-        Bet bet1 = new Bet(Side.Home, 1);
-        Bet bet2 = new Bet(Side.Away, 3);
-        Bet bet3 = new Bet(Side.Draw, 5);
-
         Ticket ticket = new Ticket(1, 2, 3);
         System.out.println(ticket);
 
