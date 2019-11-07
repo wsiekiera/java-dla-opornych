@@ -26,8 +26,23 @@ public class DateTimeRangeValidator {
      */
     public boolean doTheyOverlap() {
         //TODO implement me
-        return true;
+        if (this.dateTimeRangeList.size() < 2) return false; // pusta, albo jednoelementowa lista (zakladajac, ze startDate<endDate)
+
+        for (int compared = 0; compared < (dateTimeRangeList.size() - 1); compared++) {
+            for (int i = compared + 1; i < dateTimeRangeList.size(); i++) {
+                boolean StartDateAfterOtherEndDate = dateTimeRangeList.get(compared).getStartDate().isAfter(dateTimeRangeList.get(i).getEndDate());
+                boolean EndDateAfterOtherEndDate = dateTimeRangeList.get(compared).getEndDate().isAfter(dateTimeRangeList.get(i).getEndDate());
+
+                boolean EndDateBeforeOtherStartDate = dateTimeRangeList.get(compared).getEndDate().isBefore(dateTimeRangeList.get(i).getStartDate());
+                boolean StartDateBeforeOtherStartDate = dateTimeRangeList.get(compared).getStartDate().isBefore(dateTimeRangeList.get(i).getStartDate());
+
+                if ( !( (StartDateAfterOtherEndDate && EndDateAfterOtherEndDate) || (EndDateBeforeOtherStartDate && StartDateBeforeOtherStartDate) ) ) {
+                    return true;
+                }
+            }
         }
+        return false;
+    }
 
     /**
      * Add range to list.
