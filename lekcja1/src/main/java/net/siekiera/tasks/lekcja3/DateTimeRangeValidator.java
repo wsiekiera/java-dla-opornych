@@ -1,6 +1,7 @@
 package net.siekiera.tasks.lekcja3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -27,21 +28,14 @@ public class DateTimeRangeValidator {
      * @return
      */
     public boolean doTheyOverlap() {
-        //TODO implement me
-        if (this.dateTimeRangeList.size() < 2) return false; // pusta, albo jednoelementowa lista (zakladajac, ze startDate<endDate)
+        if (this.dateTimeRangeList.size() < 2) return false;
 
-        for (int compared = 0; compared < (dateTimeRangeList.size() - 1); compared++) {
-            for (int i = compared + 1; i < dateTimeRangeList.size(); i++) {
-                boolean StartDateAfterOtherEndDate = dateTimeRangeList.get(compared).getStartDate().isAfter(dateTimeRangeList.get(i).getEndDate());
-                boolean EndDateAfterOtherEndDate = dateTimeRangeList.get(compared).getEndDate().isAfter(dateTimeRangeList.get(i).getEndDate());
+        // Arrays.sort(this.dateTimeRangeList); czeeeeeeeeeeemuuuuuuuuuuu nie pozwala?....
 
-                boolean EndDateBeforeOtherStartDate = dateTimeRangeList.get(compared).getEndDate().isBefore(dateTimeRangeList.get(i).getStartDate());
-                boolean StartDateBeforeOtherStartDate = dateTimeRangeList.get(compared).getStartDate().isBefore(dateTimeRangeList.get(i).getStartDate());
+        Arrays.sort(new List[]{this.dateTimeRangeList}); // o co tu chodzi?....
 
-                if ( !( (StartDateAfterOtherEndDate && EndDateAfterOtherEndDate) || (EndDateBeforeOtherStartDate && StartDateBeforeOtherStartDate) ) ) {
-                    return true;
-                }
-            }
+        for(int i = 0; i < this.dateTimeRangeList.size() - 1; i++) {
+            if ( !(this.dateTimeRangeList.get(i).getEndDate().isBefore(this.dateTimeRangeList.get(i+1).getStartDate())) ) return true;
         }
         return false;
     }
