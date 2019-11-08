@@ -2,7 +2,7 @@ package net.siekiera.tasks.lekcja3;
 
 import java.time.LocalDateTime;
 
-public class DateTimeRange {
+public class DateTimeRange implements Comparable<DateTimeRange>{
     private LocalDateTime startDate;
     private LocalDateTime endDate;
 
@@ -11,11 +11,8 @@ public class DateTimeRange {
         this.endDate = endDate;
     }
 
-    public LocalDateTime getStartDate() {
-        return startDate;
-    }
-
-    public LocalDateTime getEndDate() {
-        return endDate;
+    @Override
+    public int compareTo(DateTimeRange o) {
+        return 0;
     }
 }

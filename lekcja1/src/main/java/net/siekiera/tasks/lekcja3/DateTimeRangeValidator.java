@@ -11,6 +11,8 @@ import java.util.List;
  * # Compare dates date1.isBefore(LocalDateTime date2), date1.isAfter(LocalDateTime date2),
  * date1.isEqual(LocalDateTime date2)
  *
+ * https://www.mkyong.com/java/java-object-sorting-example-comparable-and-comparator/
+ *
  */
 public class DateTimeRangeValidator {
     private List<DateTimeRange> dateTimeRangeList;
