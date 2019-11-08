@@ -31,10 +31,6 @@ public class DateTimeRangeValidator {
     public boolean doTheyOverlap() {
         if (this.dateTimeRangeList.size() < 2) return false;
 
-        // Arrays.sort(this.dateTimeRangeList); czeeeeeeeeeeemuuuuuuuuuuu nie pozwala?....
-
-        // Arrays.sort(new List[]{this.dateTimeRangeList});  o co tu chodzi?....
-
         Collections.sort(this.dateTimeRangeList);
 
         for(int i = 0; i < this.dateTimeRangeList.size() - 1; i++) {
