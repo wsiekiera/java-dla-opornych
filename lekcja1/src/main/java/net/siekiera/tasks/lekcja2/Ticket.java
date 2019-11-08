@@ -9,6 +9,10 @@ public class Ticket {
         bets[2] = new Bet(Side.Draw, draw);
     }
 
+    public Bet[] getBets() {
+        return bets;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

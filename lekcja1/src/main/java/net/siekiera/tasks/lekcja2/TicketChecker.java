@@ -10,26 +10,24 @@ public class TicketChecker {
     }
 
     public int calculateWin() {
-        //todo implement me.
-        // https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String)
-        // sprawdzenie czy wynik jest poprawny int-int, jesli nie jest rzuc wyjątek IllegalArgumentException
-        int[][] resultsSplitted = new int[3][2];
-        int i = 0;
-        int suma = 0;
-        for (String result: this.results) {
-            String[] resultSplitted = result.split("-");
-            int j = 0;
-            for(String side : resultSplitted) resultsSplitted[i][j++] = Integer.parseInt(side);
-            i++;
+        Bet[] bets = this.ticket.getBets();
+        int sum = 0;
+        for (int i=0; i<bets.length; i++) {
+            sum+=calculateWinForSingleBet(bets[i], results[i]);
         }
-        i = 0;
-        int j = 0;
-        for(int[] result: resultsSplitted) {
-            if (result[i] > result [i+1] && ticket.getBet(j).getSide() == Side.Home) suma += ticket.getBet(j).getAmount();
-            else if (result[i] < result [i+1] && ticket.getBet(j).getSide() == Side.Away) suma += ticket.getBet(j).getAmount();
-            else if (result[i] == result [i+1] && ticket.getBet(j).getSide() == Side.Draw) suma += ticket.getBet(j).getAmount();
-            j++;
-        }
-        return suma;
+        return sum;
+    }
+
+    private int calculateWinForSingleBet(Bet bet, String result) {
+        if (bet.getSide().equals(whoWins(result))) return bet.getAmount();
+        else return 0;
+    }
+
+    private Side whoWins(String result) {
+        int homeScore = Integer.parseInt(result.split("-")[0]);
+        int awayScore = Integer.parseInt(result.split("-")[1]);
+        if (homeScore>awayScore) return Side.Home;
+        else if (homeScore<awayScore) return Side.Away;
+        else return Side.Draw;
     }
 }
