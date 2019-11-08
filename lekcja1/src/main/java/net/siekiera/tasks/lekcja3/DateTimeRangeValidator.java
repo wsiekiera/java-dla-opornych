@@ -2,6 +2,7 @@ package net.siekiera.tasks.lekcja3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,7 +33,9 @@ public class DateTimeRangeValidator {
 
         // Arrays.sort(this.dateTimeRangeList); czeeeeeeeeeeemuuuuuuuuuuu nie pozwala?....
 
-        Arrays.sort(new List[]{this.dateTimeRangeList}); // o co tu chodzi?....
+        // Arrays.sort(new List[]{this.dateTimeRangeList});  o co tu chodzi?....
+
+        Collections.sort(this.dateTimeRangeList);
 
         for(int i = 0; i < this.dateTimeRangeList.size() - 1; i++) {
             if ( !(this.dateTimeRangeList.get(i).getEndDate().isBefore(this.dateTimeRangeList.get(i+1).getStartDate())) ) return true;
