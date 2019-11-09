@@ -26,8 +26,34 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
  *     ( 1 2 4 5 8 ) → ( 1 2 4 5 8 )
  */
 public class BubbleSorting {
+    boolean isSorted;
+
     public int[] bubbleSort(int[] arrayToBeSorted) {
         //todo implement me.
-        return new int[]{1,2,3};
+        if (arrayToBeSorted.length < 2) return arrayToBeSorted;
+
+        for (int i = 0; i < arrayToBeSorted.length; i++) {
+            onePass(arrayToBeSorted);
+            if (this.isSorted) break;
+        }
+        return arrayToBeSorted;
+    }
+
+    private boolean checkTwoNumbers(int[] twoNumbers) {
+        if (twoNumbers[0] <= twoNumbers[1]) return false;
+        else return true;
+    }
+
+    private int[] onePass(int[] arrayOnePass) {
+        this.isSorted = true;
+        for (int i = 0; i < arrayOnePass.length - 1; i++) {
+            if ( checkTwoNumbers(new int[]{arrayOnePass[i], arrayOnePass[i + 1]}) ) {
+                int temp = arrayOnePass[i];
+                arrayOnePass[i] = arrayOnePass[i + 1];
+                arrayOnePass[i + 1] = temp;
+                this.isSorted = false;
+            }
+        }
+        return arrayOnePass;
     }
 }
