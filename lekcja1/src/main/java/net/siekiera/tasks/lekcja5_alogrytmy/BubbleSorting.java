@@ -39,14 +39,10 @@ public class BubbleSorting {
         return arrayToBeSorted;
     }
 
-    private boolean checkTwoNumbers(int[] twoNumbers) {
-        return twoNumbers[0] > twoNumbers[1];
-    }
-
     private void onePass(int[] arrayOnePass) {
         this.isSorted = true;
         for (int i = 0; i < arrayOnePass.length - 1; i++) {
-            if ( checkTwoNumbers(new int[]{arrayOnePass[i], arrayOnePass[i + 1]}) ) {
+            if ( arrayOnePass[i] > arrayOnePass[i + 1] ) {
                 int temp = arrayOnePass[i];
                 arrayOnePass[i] = arrayOnePass[i + 1];
                 arrayOnePass[i + 1] = temp;
