@@ -7,35 +7,40 @@ import static org.junit.Assert.*;
 
 public class ChristmasTreeTest {
     private ChristmasTree christmasTree;
-    private String treeSize1;
-    private String treeSize2;
-    private String treeSize5;
+    private String treeWithHeight1;
+    private String treeWithHeight2;
+    private String treeWithHeight5;
 
 
     @Before
     public void prepare() {
         christmasTree = new ChristmasTree();
-        treeSize1 = "*";
-
-        treeSize2 = new StringBuilder()
-                .append(" * \n")
-                .append("***")
+        treeWithHeight1 = new StringBuilder()
+                .append("*")
+                .append("|")
                 .toString();
 
-        treeSize5 = new StringBuilder()
-                .append("   *   \n")
-                .append("  ***  \n")
-                .append(" ***** \n")
-                .append(" ******* \n")
-                .append("*********")
+        treeWithHeight2 = new StringBuilder()
+                .append(" *\n")
+                .append("***\n")
+                .append(" |")
+                .toString();
+
+        treeWithHeight5 = new StringBuilder()
+                .append("   *\n")
+                .append("  ***\n")
+                .append(" *****\n")
+                .append(" *******\n")
+                .append("*********\n")
+                .append("    |")
                 .toString();
 
     }
 
     @Test
     public void drawChristmasTree() {
-        assertEquals(treeSize1, christmasTree.drawChristmasTree(1));
-        assertEquals(treeSize1, christmasTree.drawChristmasTree(2));
-        assertEquals(treeSize1, christmasTree.drawChristmasTree(5));
+        assertEquals(treeWithHeight1, christmasTree.drawChristmasTree(1));
+        assertEquals(treeWithHeight2, christmasTree.drawChristmasTree(2));
+        assertEquals(treeWithHeight5, christmasTree.drawChristmasTree(5));
     }
 }
