@@ -34,6 +34,16 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
 public class ChristmasTree {
     public String drawChristmasTree(int height) {
         //todo implement me!
-        return "";
+        StringBuilder christmasTree = new StringBuilder();
+        int row;
+        for (int i = 1; i <= height; i++) {
+            for (row = 1; row <= height - i; row++) christmasTree.append(" ");
+            for (row = 1; row <= 2 * i - 1; row++) christmasTree.append("*");
+            christmasTree.append("\n");
+        }
+        for (int i = 1; i < height; i++) christmasTree.append(" ");
+        christmasTree.append("|");
+
+        return christmasTree.toString();
     }
 }
