@@ -31,9 +31,11 @@ public class BubbleSorting {
         //todo implement me.
         if (arrayToBeSorted.length < 2) return arrayToBeSorted;
 
-        for (int i = 0; i < arrayToBeSorted.length; i++) {
+        /*for (int i = 0; i < arrayToBeSorted.length; i++) {
             if (onePass(arrayToBeSorted)) break;
-        }
+        }*/
+
+        do {} while(!onePass(arrayToBeSorted));
         return arrayToBeSorted;
     }
 
