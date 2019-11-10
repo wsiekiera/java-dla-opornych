@@ -35,10 +35,9 @@ public class ChristmasTree {
     public String drawChristmasTree(int height) {
         //todo implement me!
         StringBuilder christmasTree = new StringBuilder();
-        int row;
-        for (int i = 1; i <= height; i++) {
-            for (row = 1; row <= height - i; row++) christmasTree.append(" ");
-            for (row = 1; row <= 2 * i - 1; row++) christmasTree.append("*");
+        for (int row = 1; row <= height; row++) {
+            for (int i = 1; i <= height - row; i++) christmasTree.append(" ");
+            for (int i = 1; i <= 2 * row - 1; i++) christmasTree.append("*");
             christmasTree.append("\n");
         }
         for (int i = 1; i < height; i++) christmasTree.append(" ");
