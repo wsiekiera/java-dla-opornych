@@ -13,6 +13,7 @@ public class MultiplicationTableTest {
 
     @Before
     public void prepare() {
+        multiplicationTable = new MultiplicationTable();
         table2 = new StringBuilder()
                 .append("12\n")
                 .append("24")
@@ -20,7 +21,7 @@ public class MultiplicationTableTest {
         table4 = new StringBuilder()
                 .append("1234\n")
                 .append("2468\n")
-                .append("36912")
+                .append("36912\n")
                 .append("481216")
                 .toString();
         table6 = new StringBuilder()
