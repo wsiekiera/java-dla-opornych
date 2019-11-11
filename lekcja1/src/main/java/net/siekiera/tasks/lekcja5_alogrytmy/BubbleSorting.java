@@ -1,5 +1,7 @@
 package net.siekiera.tasks.lekcja5_alogrytmy;
 
+import java.util.Arrays;
+
 /**
  * Implement simple bubble sort algorythm. Sample:
  * Take an array of numbers " 5 1 4 2 8", and sort the array from lowest number to greatest number using bubble sort.
@@ -26,22 +28,23 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
  *     ( 1 2 4 5 8 ) → ( 1 2 4 5 8 )
  */
 public class BubbleSorting {
+    private int passCount;
 
-    public int[] bubbleSort(int[] arrayToBeSorted) {
+    public int[] bubbleSort2(int[] arrayToBeSorted) {
         //todo implement me.
         if (arrayToBeSorted.length < 2) return arrayToBeSorted;
 
         /*for (int i = 0; i < arrayToBeSorted.length; i++) {
             if (onePass(arrayToBeSorted)) break;
         }*/
-
+        this.passCount = 0;
         do {} while(!onePass(arrayToBeSorted));
         return arrayToBeSorted;
     }
 
     private boolean onePass(int[] arrayOnePass) {
         boolean isSorted = true;
-        for (int i = 0; i < arrayOnePass.length - 1; i++) {
+        for (int i = 0; i < arrayOnePass.length - 1 - this.passCount; i++) {
             if ( arrayOnePass[i] > arrayOnePass[i + 1] ) {
                 int temp = arrayOnePass[i];
                 arrayOnePass[i] = arrayOnePass[i + 1];
@@ -49,6 +52,29 @@ public class BubbleSorting {
                 isSorted = false;
             }
         }
+        this.passCount++;
         return isSorted;
+    }
+
+    public int[] bubbleSort(int[] arrayToBeSorted) {
+        if (arrayToBeSorted.length < 2) return arrayToBeSorted;
+        boolean isSorted;
+        int passCount = 0;
+        do {
+            isSorted = true;
+            for (int i = 0; i < arrayToBeSorted.length - 1 - passCount; i++) {
+                if (arrayToBeSorted[i] > arrayToBeSorted[i + 1]) {
+                    int temp = arrayToBeSorted[i];
+                    arrayToBeSorted[i] = arrayToBeSorted[i + 1];
+                    arrayToBeSorted[i + 1] = temp;
+                    isSorted = false;
+                }
+            }
+        } while (!isSorted);
+        return arrayToBeSorted;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(new BubbleSorting().bubbleSort(new int[]{3, 4, 5, 2, 5, 2, 1, -7, 0})));
     }
 }

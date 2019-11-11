@@ -38,7 +38,6 @@ public class Chessboard {
                 else makeBlackField(chessboard);
             }
             if (row != edgeSize) makeNewRow(chessboard);
-
         }
         return chessboard.toString();
     }
