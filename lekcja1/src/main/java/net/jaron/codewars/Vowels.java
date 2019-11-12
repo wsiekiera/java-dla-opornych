@@ -17,7 +17,7 @@ public class Vowels {
 
     public static int getCount2(String str) {
         return str.replaceAll("(?i)[^aeiou]", "").length();
-    }
+    } // świr...
 
     public static void main(String[] args) {
         System.out.println(getCount("Abracadabra"));
