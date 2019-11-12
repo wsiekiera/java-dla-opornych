@@ -2,6 +2,7 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.w3c.dom.ls.LSOutput;
 
 import static org.junit.Assert.*;
 
@@ -16,7 +17,7 @@ public class ChristmasTreeTest {
     public void prepare() {
         christmasTree = new ChristmasTree();
         treeWithHeight1 = new StringBuilder()
-                .append("*")
+                .append("*\n")
                 .append("|")
                 .toString();
 
@@ -27,9 +28,9 @@ public class ChristmasTreeTest {
                 .toString();
 
         treeWithHeight5 = new StringBuilder()
-                .append("   *\n")
-                .append("  ***\n")
-                .append(" *****\n")
+                .append("    *\n")
+                .append("   ***\n")
+                .append("  *****\n")
                 .append(" *******\n")
                 .append("*********\n")
                 .append("    |")
