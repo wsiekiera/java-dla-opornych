@@ -1,5 +1,7 @@
 package net.siekiera.tasks.lekcja5_alogrytmy;
 
+import java.util.Arrays;
+
 import static net.siekiera.tasks.lekcja5_alogrytmy.Utilities.makeNewRow;
 
 /**
@@ -37,13 +39,23 @@ public class ChristmasTree {
     public String drawChristmasTree(int height) {
         //todo implement me!
         StringBuilder christmasTree = new StringBuilder();
+        char[] oneRow;
         for (int row = 1; row <= height; row++) {
-            for (int i = 1; i <= height - row; i++) addSpace(christmasTree);
-            for (int i = 1; i <= 2 * row - 1; i++) addLeaf(christmasTree);
+            oneRow = new char[height + row - 1];
+            //Arrays.fill(oneRow, 0, height - row, ' ');
+            Arrays.fill(oneRow, ' ');
+            Arrays.fill(oneRow, height - row, height + row - 1, '*');
+            //for (int i = 1; i <= height - row; i++) addSpace(christmasTree);
+            //for (int i = 1; i <= 2 * row - 1; i++) addLeaf(christmasTree);
+            christmasTree.append(oneRow);
             makeNewRow(christmasTree);
         }
-        for (int i = 1; i < height; i++) addSpace(christmasTree);
-        christmasTree.append("|");
+        oneRow = new char[height];
+        Arrays.fill(oneRow, ' ');
+        oneRow[height - 1] = '|';
+        christmasTree.append(oneRow);
+        //for (int i = 1; i < height; i++) addSpace(christmasTree);
+        //christmasTree.append("|");
 
         return christmasTree.toString();
     }
@@ -57,6 +69,6 @@ public class ChristmasTree {
     }
 
     public static void main(String[] args) {
-        System.out.println(new ChristmasTree().drawChristmasTree(8));
+        System.out.println(new ChristmasTree().drawChristmasTree(3));
     }
 }
