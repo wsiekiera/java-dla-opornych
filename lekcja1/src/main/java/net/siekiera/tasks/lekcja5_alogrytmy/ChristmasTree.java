@@ -42,8 +42,8 @@ public class ChristmasTree {
         char[] oneRow;
         for (int row = 1; row <= height; row++) {
             oneRow = new char[height + row - 1];
-            //Arrays.fill(oneRow, 0, height - row, ' ');
-            Arrays.fill(oneRow, ' ');
+            Arrays.fill(oneRow, 0, height - row, ' ');
+            //Arrays.fill(oneRow, ' '); pod spodem siedzi for(...) {...} wiec lepiej podac range
             Arrays.fill(oneRow, height - row, height + row - 1, '*');
             //for (int i = 1; i <= height - row; i++) addSpace(christmasTree);
             //for (int i = 1; i <= 2 * row - 1; i++) addLeaf(christmasTree);
@@ -51,7 +51,7 @@ public class ChristmasTree {
             makeNewRow(christmasTree);
         }
         oneRow = new char[height];
-        Arrays.fill(oneRow, ' ');
+        Arrays.fill(oneRow, ' '); // length vs length-1... lenistwo...
         oneRow[height - 1] = '|';
         christmasTree.append(oneRow);
         //for (int i = 1; i < height; i++) addSpace(christmasTree);
