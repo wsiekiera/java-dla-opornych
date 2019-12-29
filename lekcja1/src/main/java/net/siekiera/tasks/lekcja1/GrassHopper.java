@@ -13,8 +13,29 @@ package net.siekiera.tasks.lekcja1;
  * 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
  */
 public class GrassHopper {
-        public static int summation(int n) {
-
-            return 0;
+        public static int summationAlt(int n) {
+            if(n % 2 == 0) {
+                return (n / 2) * (1 + n);
+            } else {
+                return ((n - 1) / 2) * (1 + n) + ((n + 1) / 2);
+            }
         }
+
+        public static int summationAlt1(int n) {
+            int counter = 1;
+            int sum = 0;
+            while ( counter <= n) {
+                sum += counter;
+                counter++;
+            }
+            return sum;
+        }
+
+        public static int summation(int n) {
+            if (n == 1) {
+                return 1;
+            }
+            return summation(n-1) + n;
+        }
+
 }

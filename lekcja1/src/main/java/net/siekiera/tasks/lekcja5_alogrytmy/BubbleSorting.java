@@ -27,7 +27,22 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
  */
 public class BubbleSorting {
     public int[] bubbleSort(int[] arrayToBeSorted) {
-        //todo implement me.
-        return new int[]{1,2,3};
+        int length = arrayToBeSorted.length;
+        boolean noSwap = true;
+        for(int i = 0; i < length - 1; i++) {
+            for (int j = 0; j < length - i - 1; j++) {
+                if (arrayToBeSorted[j] > arrayToBeSorted[j + 1]) {
+                    int temp = arrayToBeSorted[j];
+                    arrayToBeSorted[j] = arrayToBeSorted[j + 1];
+                    arrayToBeSorted[j + 1] = temp;
+                    noSwap = false;
+                }
+            }
+            if (noSwap == true) {
+                break;
+            }
+        }
+
+        return arrayToBeSorted;
     }
 }

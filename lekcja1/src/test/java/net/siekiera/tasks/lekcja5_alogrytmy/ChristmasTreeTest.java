@@ -16,7 +16,7 @@ public class ChristmasTreeTest {
     public void prepare() {
         christmasTree = new ChristmasTree();
         treeWithHeight1 = new StringBuilder()
-                .append("*")
+                .append("*\n")
                 .append("|")
                 .toString();
 
@@ -27,9 +27,9 @@ public class ChristmasTreeTest {
                 .toString();
 
         treeWithHeight5 = new StringBuilder()
-                .append("   *\n")
-                .append("  ***\n")
-                .append(" *****\n")
+                .append("    *\n")
+                .append("   ***\n")
+                .append("  *****\n")
                 .append(" *******\n")
                 .append("*********\n")
                 .append("    |")

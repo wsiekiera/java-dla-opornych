@@ -26,7 +26,25 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
  */
 public class Chessboard {
     public String generateChessboard(int edgeSize) {
-        //todo implement me!
-        return "";
+        String oddLine = repeatString("WB", edgeSize / 2);
+        String evenLine = repeatString("BW", edgeSize / 2);
+        String board = "";
+        for(int i = 0; i < edgeSize; i++) {
+            if (i == 0 || i % 2 == 0) {
+                board += oddLine;
+            } else {
+                board += evenLine;
+            }
+            if (i != edgeSize - 1) {
+                board += "\n";
+            }
+        }
+        return board;
+    }
+
+    public static String repeatString(String str, int times) {
+        if (times <= 0) return "";
+        else return str + repeatString(str, times-1);
     }
 }
+

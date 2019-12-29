@@ -33,7 +33,18 @@ package net.siekiera.tasks.lekcja5_alogrytmy;
  */
 public class ChristmasTree {
     public String drawChristmasTree(int height) {
-        //todo implement me!
-        return "";
+        String tree = "";
+
+        for (int i = 0; i < height; i++) {
+            tree += repeatString(" ", height - 1 - i) + repeatString("*", i * 2 + 1) + "\n";
+        }
+        tree += repeatString(" ", height - 1) + "|"; // trunk
+
+        return tree;
+    }
+
+    public static String repeatString(String str, int times) {
+        if (times <= 0) return "";
+        else return str + repeatString(str, times-1);
     }
 }

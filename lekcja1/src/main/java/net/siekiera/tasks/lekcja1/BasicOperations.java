@@ -14,8 +14,18 @@ package net.siekiera.tasks.lekcja1;
  * basicOp('/', 49, 7)        // Output: 7
  */
 public class BasicOperations {
-        public static int basicMath(String op, int v1, int v2)
-        {
-            return 0;
+        public static int basicMath(String op, int v1, int v2) {
+            switch(op) {
+                case "+":
+                    return v1 + v2;
+                case "-":
+                    return v1 - v2;
+                case "*":
+                    return v1 * v2;
+                case "/":
+                    return v1 / v2;
+                default:
+                    return 0;
+            }
         }
 }
