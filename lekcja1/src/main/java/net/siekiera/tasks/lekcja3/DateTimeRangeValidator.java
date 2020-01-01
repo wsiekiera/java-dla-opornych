@@ -2,6 +2,7 @@ package net.siekiera.tasks.lekcja3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
 
 /**
  * We don't want our ranges to overlap. This validator should check if ranges overlap or not.
@@ -27,9 +28,12 @@ public class DateTimeRangeValidator {
      * @return
      */
     public boolean doTheyOverlap() {
-        //TODO implement me
-        return true;
+        this.dateTimeRangeList.sort(DateTimeRangeComparator);
+        for(int i = 0; i < this.dateTimeRangeList.size() - 1; i++) {
+            if(this.dateTimeRangeList.get(i).checkOverlap(this.dateTimeRangeList.get(i+1))) return true;
         }
+        return false;
+    }
 
     /**
      * Add range to list.
@@ -38,4 +42,10 @@ public class DateTimeRangeValidator {
     public void addRange(DateTimeRange dateTimeRange) {
         this.dateTimeRangeList.add(dateTimeRange);
     }
+
+    public static Comparator<DateTimeRange> DateTimeRangeComparator = new Comparator<DateTimeRange>() {
+        public int compare(DateTimeRange a, DateTimeRange b) {
+            return a.compareTo(b);
+        }
+    };
 }

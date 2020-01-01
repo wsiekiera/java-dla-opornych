@@ -11,8 +11,12 @@ public class DateTimeRange implements Comparable<DateTimeRange>{
         this.endDate = endDate;
     }
 
+    public boolean checkOverlap(DateTimeRange o) {
+        return this.startDate.isAfter(o.endDate) || this.endDate.isAfter(o.startDate);
+    }
+
     @Override
     public int compareTo(DateTimeRange o) {
-        return 0;
+        return this.startDate.isBefore(o.startDate) ? -1 : this.startDate.isAfter(o.startDate) ? 1 : 0;
     }
 }

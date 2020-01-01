@@ -41,34 +41,25 @@ public class DateTimeRangeValidatorTest {
         // range4 overlaps with range1, range2 but not with range3
     }
 
-//    @Test
-//    public void emptyList() {
-//        DateTimeRangeValidator validator = new DateTimeRangeValidator();
-//        assertEquals(false, validator.doTheyOverlap());
-//    }
-//
-//    @Test
-//    public void listWithOneEntry() {
-//        DateTimeRangeValidator validator = new DateTimeRangeValidator();
-//        validator.addRange(range1);
-//        assertEquals(false, validator.doTheyOverlap());
-//    }
-//
-//    @Test
-//    public void listWithManyEntriesThatDontOverlap() {
-//        DateTimeRangeValidator validator = new DateTimeRangeValidator();
-//        validator.addRange(range1);
-//        validator.addRange(range2);
-//        validator.addRange(range3);
-//        assertEquals(false, validator.doTheyOverlap());
-//    }
+    @Test
+    public void emptyList() {
+        DateTimeRangeValidator validator = new DateTimeRangeValidator();
+        assertEquals(false, validator.doTheyOverlap());
+    }
 
     @Test
-    public void custom1() {
+    public void listWithOneEntry() {
         DateTimeRangeValidator validator = new DateTimeRangeValidator();
+        validator.addRange(range1);
+        assertEquals(false, validator.doTheyOverlap());
+    }
+
+    @Test
+    public void listWithManyEntriesThatDontOverlap() {
+        DateTimeRangeValidator validator = new DateTimeRangeValidator();
+        validator.addRange(range1);
         validator.addRange(range2);
         validator.addRange(range3);
-        validator.addRange(range1);
         assertEquals(false, validator.doTheyOverlap());
     }
 
